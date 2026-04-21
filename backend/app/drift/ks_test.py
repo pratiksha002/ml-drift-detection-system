@@ -9,7 +9,8 @@ class KStest:
 
         return{
             "method": "ks_test",
-            "statistic": stat,
-            "p_value": p_value,
-            "drift": p_value < self.alpha
+            "statistic": round(float(stat), 5),
+            "p_value": round(float(p_value), 5),
+            "raw_p_value": float(p_value),
+            "drift": bool(p_value < self.alpha)
         }

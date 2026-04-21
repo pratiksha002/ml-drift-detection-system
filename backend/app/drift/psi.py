@@ -27,6 +27,7 @@ class PSI:
 
         return{
             "method": "psi",
-            "psi_value": psi_value,
-            "drift": psi_value > 0.2
+            "psi_value": round(float(psi_value), 5),
+            "raw_psi_value": float(psi_value),
+            "drift": bool(psi_value > 0.2)
         }
